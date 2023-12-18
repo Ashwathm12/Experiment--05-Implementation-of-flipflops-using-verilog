@@ -1,5 +1,5 @@
 ### Name:Ashwath M
-### Register number:
+### Register number:23000309
 ## Experiment 05 Implementation of flipflops using verilog
 ### AIM: 
 To implement all the flipflops using verilog and validating their functionality using their functional tables
@@ -118,34 +118,47 @@ Step 5: At the end give endmodule.
 Step 6: Run the program and choose RTL viewer to get RTL realization.
 
 ### PROGRAM 
-/*
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+#### SR flipflops:
+```
+module flop(S,R,clk,Q,Qbar);
+input S,R,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=S|((~R)&Q);
+Qbar=R|((~S)&(Qbar));
+end
+endmodule
+```
+#### JK flipflops:
 
+#### T flipflops:
 
-
-
-
+#### D flipflops:
 
 ### RTL LOGIC FOR FLIPFLOPS 
+#### SR flipflops:
+![exp5 rtl](https://github.com/Ashwathm12/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/78b9c34f-75ad-4a4a-85e6-3cd5bbff3d0c)
 
+#### JK flipflops:
 
+#### T flipflops:
 
-
-
-
-
+#### D flipflops:
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
+#### SR flipflops:
+![exp5 wve form](https://github.com/Ashwathm12/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/552e0150-546d-45f2-958e-286d58c4c501)
+#### JK flipflops:
 
+#### T flipflops:
 
-
-
-
-
+#### D flipflops:
 
 
 ### RESULTS 
+Implementation-of-flipflops-using-verilog successfully completed.

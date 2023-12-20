@@ -1,4 +1,4 @@
-![sr](https://github.com/Ashwathm12/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/368899cd-b379-4534-9f3c-095f879d2078)### Name:Ashwath M
+### Name:Ashwath M
 ### Register number:23000309
 ## Experiment 05 Implementation of flipflops using verilog
 ### AIM: 

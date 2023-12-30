@@ -167,28 +167,30 @@ endmodule
 ```
 ## D-Flip Flop
 ```
-module d(q,qbar,d1,clk);
-input d1,clk;
-output q,qbar;
-wire n1;
-wire n2;
-not(x,d1);
-nand(n1,clk,d1);
-nand(n2,clk,x);
-nand(q,n2,qbar);
-nand(qbar,n1,q);
+module exp_5_dff(D,clk,Q,Qbar);
+input D,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin 
+Q=D;
+Qbar=~D;
+end
 endmodule
 ```
 ## T-Flip Flop
 ```
-module tff(t,qbar,q,clk);
-input t,clk;
+module t_ff(clk,T,q,qbar);
+input clk,T;
 output q,qbar;
-wire n1,n2;
-nand(n1,t,clk,qbar);
-nand(n2,clk,t,q);
-nand(q,n1,qbar);
-nand(qbar,n2,q);
+reg q,qbar;
+always @(posedge clk)
+begin
+q<=(T&~q)|(~T&q);
+qbar<=~q;
+end 
 endmodule
 ```
 ## RTL LOGIC FOR FLIPFLOPS
@@ -202,11 +204,12 @@ endmodule
 
 
 ## D-Flip Flop
-![291246652-b38336da-66c8-43d2-ad12-29aad6ebdb12](https://github.com/altrinahas/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145980038/f8b7014b-771c-4f28-9891-9485c6a8a2f9)
+![292085985-8a3c6b3f-4cc1-4ac8-9190-2a85bc114141](https://github.com/altrinahas/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/3803bca3-5ff8-4e12-9fb5-86f32db49e9c)
+
 
 ## T-Flip Flop
 
-![291246711-ed2d5929-f846-40e4-9bcb-e8709d6372f1](https://github.com/altrinahas/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145980038/7587df6a-4aba-4ad8-88cd-b827cb55178d)
+![291464937-1ecf0667-3c4f-4819-b022-406a95a50793](https://github.com/altrinahas/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/52232431-7193-4c9c-92c2-b73ca552abf6)
 
 
 ## TIMING DIGRAMS FOR FLIP FLOPS
@@ -222,12 +225,14 @@ endmodule
 
 ## D-Flip Flop
 
-![291246776-61873cf1-ff58-4f20-a195-9f209c8d850f](https://github.com/altrinahas/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145980038/198d236d-7b18-4ab0-8dfc-4bf9310e4b1b)
+![292086637-d3b2778c-bbbb-48c7-937a-c7ed4bc90225](https://github.com/altrinahas/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/69828d3c-24ae-4ee2-98bb-8bd00ab0e1e1)
+
 
 
 ## T-Flip Flop
 
-![291246841-ebdcb878-4aae-45bb-8108-f08ff8d80d3e](https://github.com/altrinahas/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145980038/69a8bc28-05d4-4cb7-901f-711de8cbd898)
+![292086857-6a19a8af-0316-4dce-b6ff-4210f356c15b](https://github.com/altrinahas/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/3ef275d0-5598-4daf-979f-224a566ee6bb)
+
 
 
 ##  RESULTS

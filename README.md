@@ -187,18 +187,19 @@ endmodule
 ![d](https://github.com/Ashwathm12/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/6d63d6bc-5e0e-4434-916e-028e54419e5d)
 
 
-### TIMING DIGRAMS FOR FLIP FLOPS 
-#### SR flipflops:
-![sr](https://github.com/Ashwathm12/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/228632de-17d3-4508-88c7-b4fcb954ada1)
+## TIMING DIGRAMS FOR FLIP FLOPS 
+### SR Flip-Flop:
+![sr td](https://github.com/SriVignesh-G/Experiment--05-Implementation-of-flipflops-using-verilog/assets/147576510/218caec6-efc6-4372-90f5-6af24d03b303)
 
-#### JK flipflops:
-![jk](https://github.com/Ashwathm12/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/fef987f3-81a9-4d13-b6c7-a7c7c1d1dbc5)
+### JK Flip-Flop:
+![jk td](https://github.com/SriVignesh-G/Experiment--05-Implementation-of-flipflops-using-verilog/assets/147576510/b4e79b10-6377-4444-b024-939c353c71b2)
 
-#### T flipflops:
-![t](https://github.com/Ashwathm12/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/259224e3-7e08-4474-bb49-013f028f5b0f)
+### D Flip-Flop:
+![d td](https://github.com/SriVignesh-G/Experiment--05-Implementation-of-flipflops-using-verilog/assets/147576510/be63bfc7-0d52-49cb-9831-8f2262ec5645)
 
-#### D flipflops:
-![d](https://github.com/Ashwathm12/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849225/02804de3-b665-4d43-bc45-2d69b47ed26e)
+### T Flip-Flop:
+![t td](https://github.com/SriVignesh-G/Experiment--05-Implementation-of-flipflops-using-verilog/assets/147576510/27484ca1-9054-448d-a446-71ab4098815d)
+
 
 
 ### RESULTS 

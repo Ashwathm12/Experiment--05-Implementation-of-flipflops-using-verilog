@@ -136,42 +136,39 @@ endmodule
 ```
 #### JK flipflops:
 ```
-module jk(q,qbar,k,j,clk);
+module jk(j,k,clk,q,qbar);
 input j,k,clk;
 output q,qbar;
-wire nand1_out;
-wire nand2_out;
-nand(nand1_out,j,clk,qbar);
-nand(nand2_out,k,clk,q);
-nand(q,nand1_out,qbar,qbar);
-nand(qbar,nand2_out,q);
+always @(posedge clk)
+begin
+q<=(j&~q)|(~k&q);
+qbar<=~q;
+end
 endmodule
 ```
 #### T flipflops:
 ```
-module tff(t,qbar,q,clk);
+module t(t,t,clk,q,qbar);
 input t,clk;
-output q,qbar;
-wire n1,n2;
-nand(n1,t,clk,qbar);
-nand(n2,clk,t,q);
-nand(q,n1,qbar);
-nand(qbar,n2,q);
+output qbar;
+always@(posedge clk)
+begin
+q=((~q)&t)|(q&(~t));
+end
+assign qbar=~q;
 endmodule
 ```
 #### D flipflops:
 ```
-module d(q,qbar,d1,clk);
-input d1,clk;
-output q,qbar;
-wire n1;
-wire n2;
-not(x,d1);
-nand(n1,clk,d1);
-nand(n2,clk,x);
-nand(q,n2,qbar);
-nand(qbar,n1,q);
-endmodule 
+module Df(d,clk,q,qbar);
+input d,clk;
+output qbar;
+always@(posedge clk)
+begin
+q=d;
+end
+assign qbar=~q;
+endmodule
 ```
 ### RTL LOGIC FOR FLIPFLOPS 
 #### SR flipflops:
